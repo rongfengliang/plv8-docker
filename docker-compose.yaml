@@ -1,0 +1,29 @@
+version: "3"
+services: 
+  trace:
+    image: dalongrong/alpine-strace
+    pid: "host"
+  pg:
+    image: clkao/postgres-plv8
+    ports:
+    - "5432:5432"
+    environment: 
+    - "POSTGRES_PASSWORD=dalong"
+  pgnew:
+    image: dalongrong/plv8:10-2
+    ports:
+    - "5433:5432"
+    environment: 
+    - "POSTGRES_PASSWORD=dalong"
+  pgnew2-3-8:
+    image: dalongrong/plv8:2.3.8
+    ports:
+    - "5434:5432"
+    environment: 
+    - "POSTGRES_PASSWORD=dalong"
+  pgnew2-3-9:
+    image: dalongrong/plv8:2.3.9
+    ports:
+    - "5435:5432"
+    environment: 
+    - "POSTGRES_PASSWORD=dalong"
