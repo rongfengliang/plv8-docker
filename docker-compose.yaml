@@ -3,6 +3,8 @@ services:
   trace:
     image: dalongrong/alpine-strace
     pid: "host"
+    cap_add: 
+    - ALL
   pg:
     image: clkao/postgres-plv8
     ports:
